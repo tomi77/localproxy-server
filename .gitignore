@@ -31,4 +31,8 @@ bin/
 .kdev4/
 Makefile
 build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.kdev4
 
