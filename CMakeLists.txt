@@ -22,7 +22,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 find_package(ZMQ REQUIRED)
 include_directories(${ZMQ_INCLUDE_DIR})
 
-add_executable(zmq_local_proxy src/main.cpp)
+add_executable(zmq_local_proxy src/main.cpp src/zmq_proxy.cpp)
 target_link_libraries(zmq_local_proxy ${ZMQ_LIBRARY})
 install (TARGETS zmq_local_proxy DESTINATION bin)
 set_property(TARGET zmq_local_proxy PROPERTY CXX_STANDARD 11)
