@@ -1,3 +1,5 @@
+#ifdef WITH_ZMQ
+
 #include <iostream>     // std::cout, std::cerr, std::endl
 #include <cstring>      // std::string
 #include <zmq.hpp>      // zmq::
@@ -54,3 +56,14 @@ namespace localproxy {
 	}
     }
 }
+
+#else // WITH_ZMQ
+
+namespace localproxy {
+    namespace zmq_ {
+	void proxy(const char* in, const char* out) {
+	}
+    }
+}
+
+#endif // WITH_ZMQ
